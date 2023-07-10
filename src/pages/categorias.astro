@@ -1,0 +1,91 @@
+---
+import Layout from '../layouts/Layout.astro'
+import RainbowInvert from '../assets/rainbow-invert.svg'
+---
+
+<Layout title="LIC - Categorías">
+  <div class="max-w-5xl p-3 m-auto">
+    <img id="background" src={RainbowInvert} class="absolute top-0 left-0 m-auto right-0 -z-10" alt="">
+      <h1 class="text-6xl font-bold mt-32 text-center">CATEGORÍAS</h1>
+      <!-- <h2 class="text-5xl font-extrabold mb-10 text-center">CATEGORÍAS</h2> -->
+      <h3 class="text-lg text-center mt-5 mb-5 font-semibold">Elaboramos estas encuestas a partir de cuatro categorías que se consideran  relevantes en la gestión y la incidencia en el trabajo de residencias y residentes.</h3>
+
+    <div class="grid divide-y divide-black mx-auto mt-8 p-3 rounded-lg">
+      <div class="py-5">
+        <details class="group">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+            <span class="font-bold">RESONANCIA CULTURAL</span>
+            <span class="transition group-open:rotate-180">
+              <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </summary>
+          <p class="mt-3 group-open:animate-fadeIn">
+            En el marco de los proyectos culturales y las residencias de arte, las resonancias culturales (producciones y procesos artísticos o culturales) son construcciones de lenguaje que transforman el territorio y la geografía humana.
+          </p>
+          <p class="mt-3 group-open:animate-fadeIn">
+            Estas redes de signos contribuyen a su vez con los procesos comunitarios y estos materializan una persistencia en la memoria individual y colectiva, en y más allá del acontecimiento.
+            Las dinámicas de las residencias se diferencian de las lógicas mercantilistas del circuito artístico al propiciar un manejo singular del tiempo y de los procesos de producción y difusión.
+          </p>
+          <p class="mt-3 group-open:animate-fadeIn">
+            Las cinco variables de las resonancias culturales incluyen a las materias de expresión, lenguajes, tecnologías, temáticas, niveles relacionales y expansivos.
+          </p>
+        </details>
+      </div>
+
+      <div class="py-5">
+        <details class="group">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+            <span class="font-bold">COMUNIDADES</span>
+            <span class="transition group-open:rotate-180">
+              <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </summary>
+          <p class="mt-3 group-open:animate-fadeIn">
+            Las residencias y proyectos culturales establecen vínculos situados en comunidades con sus valores y modos de percibir las prácticas de sus integrantes. El sentido de las acciones y saberes compartidos explícita o implícitamente se manifiestan en la participación individual y social. Al considerar que existe una incipiente vinculación de las residencias con la población local, surge la posibilidad de trabajar con niñeces y juventudes para descentralizar los procesos artísticos y culturales de la mirada adultocentrista.
+          </p>
+        </details>
+      </div>
+
+      <div class="py-5">
+        <details class="group">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+            <span class="font-bold">CULTURA AMBIENTAL</span>
+            <span class="transition group-open:rotate-180">
+              <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"     viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </summary>
+          <p class="mt-3 group-open:animate-fadeIn">
+            Considerando la crisis climática y ecológica actual, resulta pertinente incentivar una cultura ambiental que minimice el impacto negativo de la actividad humana sobre el entorno. En el marco de las residencias y proyectos culturales, creemos necesario visibilizar y abordar las problemáticas ambientales y generar acciones que aporten a la construcción de una cultura de cuidado ambiental.
+          </p>
+        </details>
+      </div>
+
+      <div class="py-5">
+        <details class="group">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+            <span class="font-bold">GESTIÓN</span>
+            <span class="transition group-open:rotate-180">
+              <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </summary>
+          <p class="mt-3 group-open:animate-fadeIn">
+            La gestión cultural es un trabajo de interpretación y escucha del territorio situado, que piensa, diseña, crea, desarrolla proyectos y acciones que dialogan con la comunidad.
+          </p>
+          <p class="mt-3 group-open:animate-fadeIn">
+            Gestionar implica la creación de puentes de pensamiento y reflexión, que se materializan en escenarios posibles activando mecanismos de participación, que favorezcan   la producción de políticas culturales vinculadas a las prácticas sensibles y las nuevas formas de habitar.
+          </p>
+          <p class="mt-3 group-open:animate-fadeIn">
+            Desde esta perspectiva nos hacemos preguntas referidas a los procesos de gestión, financiamiento, vinculación y comunicación de las Residencias / Proyectos Culturales.
+          </p>
+        </details>
+      </div>
+    </div>
+  </div>
+
+    <!-- <p class="absolute bottom-2 right-0 left-0 text-2xl uppercase font-bold text-center">intrucciones de uso</p>
+    <img src={ArrowDown} class="absolute bottom-10 right-0 left-0 m-auto w-16 animate-bounce"/> -->
+</Layout>

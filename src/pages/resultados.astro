@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DonutChartComponent from '../components/DonutChart'
+import BarChartComponent from '../components/BarChart'
+import BarListComponent from '../components/BarList'
+import worldMap from '../assets/world-map.png'
+import americaMap from '../assets/america-map.png'
+import argentinaMap from '../assets/argentina-map.png'
+---
+
+<Layout title="LIC - Resultados">
+	<main class="max-w-5xl m-auto">
+		<DonutChartComponent client:only='react'/>
+		<BarListComponent client:only='react' />
+		<BarChartComponent client:only='react' />
+		<img class="max-w-xl" src={worldMap} alt="">
+		<img class="max-w-xl" src={americaMap} alt="">
+		<img class="max-w-xl" src={argentinaMap} alt="">
+	</main>
+</Layout>

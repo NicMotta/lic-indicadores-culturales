@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Vector from '../assets/vector.svg'
+import Hourglass from '../assets/hourglass.svg'
+import ArrowDown from '../assets/arrow-down.svg'
+---
+
+<Layout title="LIC - Instrucciones de uso">
+  <div class="max-w-5xl p-3 m-auto relative">
+    <img src={Hourglass} class="w-50 absolute bottom-0 left-0 m-auto right-0 -z-10" alt="">
+    <h1 class="text-6xl font-bold mt-32 mb-10 text-center">INSTRUCCIONES DE USO</h1>
+    <div class="text-left mb-12">
+      <p class="my-2">Estas encuestas tienen como propósito relevar el estado de situación actual de las residencias de arte y de la Red Quincho. Hay dos encuestas, una orientada a la red de residencias y otra a los artistas, investigadores, gestores, curadores que van participando en los programas de las residencias.</p>
+      <p class="my-2">La encuesta a los residencias es un requisito asumido por los miembros de Quincho.</p>
+      <p>Repitiendo la misma encuesta regularmente <span class="my-2 font-semibold hover:bg-black hover:text-white p-1 rounded-md">cada 12 meses cotejaremos el estado de situación</span> de cada residencia y de la red.</p>
+      <p>Estos datos sirven para pensar colectivamente los aspectos que son importantes para mejorar y crecer como residencias de arte, como red y como comunidad.</p>
+      <p class="my-2 mb-10">La encuesta a lxs residentes tiene como propósito relevar los alcances del proceso de trabajo ocurrido durante la residencia.</p>
+
+      <div class="grid grid-cols-2 gap-10 mt-10 text-center text-lg">
+        <a class="font-bold border-2 border-black rounded-md p-1 bg-black hover:bg-white hover:text-black text-white" href="https://redquincho.ar/">ENCUESTA RESIDENCIAS</a>
+        <a class="font-bold border-2 border-black rounded-md p-1 bg-black hover:bg-white hover:text-black text-white" href="https://redquincho.ar/">ENCUESTA RESIDENTES</a>
+      </div>
+
+      <h1 class="text-6xl font-semibold mt-32 text-center">BUENAS PRÁCTICAS</h1>
+      <h2 class="text-5xl font-extrabold mb-10 text-center">DE UNA RESIDENCIA ARTÍSTICA</h2>
+      <div class="text-left mb-12">
+        <p class="my-2">El origen de lo que consideramos buenas prácticas dentro de las residencias artísticas nace de la recopilación de los aportes de cada uno de lxs directorxs pertenecientes a la <span class="font-bold">RED QUINCHO</span>. Este es un documento en proceso que se va nutriendo a partir de la integración de las perspectivas de diferentes gestorxs culturalxs.</p>
+        <p class="my-2">Leer lo “manifiesto” a partir de los vínculos que dichos encuentros establecen en territorio, nos permite determinar indicadores que la gestión cultural expande, desde prácticas artísticas que traducen las nuevas formas de habitar.</p>
+        <p>Consideramos oportuno proponer el ejercicio de agremiar miradas transdisciplinares que re-definan a la gestión cultural, desde el impacto que sus variables conforman, poniendo en valor el total de sus capacidades a la hora de acompañar y desarrollar residencias, en clave socio-comunitaria, situada, territorial.</p>
+        <p class="my-2 mb-10">Si se determinan indicadores culturales basados en categorías orientadas a una constelación residencia-contexto-experiencia, es posible generar un espacio que retome la gestión cultural desde su capacidad empática, en pos de potenciar el desarrollo de prácticas situadas que iluminen otros escenarios comprometidos con un buen vivir.</p>
+    </div>
+  </div>
+    <!-- <p class="absolute bottom-2 right-0 left-0 text-2xl font-bold text-center">CATEGORÍAS</p>
+    <img src={ArrowDown} class="absolute bottom-10 right-0 left-0 m-auto w-16 animate-bounce"/> -->
+</Layout>
