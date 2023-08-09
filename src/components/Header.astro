@@ -2,22 +2,20 @@
 import Logo from '/assets/logo.svg';
 ---
 
-<header class="flex h-16 mb-10 place-content-between items-center font-semibold">
-  <div class="mx-5 my-auto flex gap-3 items-center">
-    <img src={Logo} class="w-10" alt="">
-    <a href='/' class="p-2 hover:rounded-md hover:bg-black hover:text-white">
-      <span class="font-extrabold">LIC </span>
-      <span class="">- Laboratorio de Indicadores Culturales</span>
+<header >
+  <div class="text-center grid grid-cols-1 md:flex h-16 mb-10 font-semibold">
+    <div class="mx-5 my-auto hidden gap-1 items-center md:flex">
+      <img src={Logo} class="w-7" alt="">
+      <a href='/' class="p-2 hover:rounded-md hover:bg-black hover:text-white">
+        <p><span class="font-extrabold">LIC </span>- Laboratorio de Indicadores Culturales</p>
       </a>
-  </div>
-  <div class="mx-5 my-auto">
-    <div class="">
-      <a class="mx-1 p-2 rounded-md hover:bg-black hover:text-white" href="/categorias">Categorías</a>
-      <a class="mx-1 p-2 rounded-md hover:bg-black hover:text-white" href="/instrucciones-de-uso">Instrucciones de uso</a>
-      <a class="mx-1 p-2 rounded-md hover:bg-black hover:text-white" href="/buenas-practicas">Buenas prácticas</a>
-      <a class="mx-1 p-2 rounded-md hover:bg-black hover:text-white" href="/formulario-residencias">Formulario Residencias</a>
-      <a class="mx-1 p-2 rounded-md hover:bg-black hover:text-white" href="/formulario-residentes">Formulario Residentes</a>
-      <!-- <a class="mx-5 hover:text-violet-600" href="/resultados">Resultados</a> -->
+    </div>
+    <div class="grid grid-cols-2 md:flex mx-5 my-auto text-base md:text-base">
+      <a class="md:mx-1 p-2 rounded-md hover:bg-black hover:text-white" href="/categorias">Categorías</a>
+      <a class="md:mx-1 p-2 rounded-md hover:bg-black hover:text-white" href="/instrucciones-de-uso">Instrucciones de uso</a>
+      <a class="md:mx-1 p-2 rounded-md hover:bg-black hover:text-white" href="/buenas-practicas">Buenas prácticas</a>
+      <a class="mx-1 p-2 rounded-md hover:bg-black hover:text-white" href="/formulario-residencias">Formularios</a>
+      <!-- <a class="mx-1 p-2 rounded-md hover:bg-black hover:text-white" href="/formulario-residentes">Formulario Residentes</a> -->
     </div>
   </div>
 </header>
