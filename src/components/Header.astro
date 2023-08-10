@@ -3,7 +3,7 @@ import Logo from '/assets/logo.svg';
 ---
 
 <header >
-  <div class="text-center grid grid-cols-1 md:flex h-16 mb-10 font-semibold">
+  <div class="text-center grid grid-cols-1 sm:flex h-16 mb-10 font-semibold justify-between">
     <div class="mx-5 my-auto hidden gap-1 items-center md:flex">
       <img src={Logo} class="w-7" alt="">
       <a href='/' class="p-2 hover:rounded-md hover:bg-black hover:text-white">
@@ -11,11 +11,12 @@ import Logo from '/assets/logo.svg';
       </a>
     </div>
     <div class="grid grid-cols-2 md:flex mx-5 my-auto text-base md:text-base">
+      <a class="mx-1 p-2 rounded-md hover:bg-black hover:text-white md:hidden" href="/">Inicio</a>
       <a class="md:mx-1 p-2 rounded-md hover:bg-black hover:text-white" href="/categorias">Categorías</a>
       <a class="md:mx-1 p-2 rounded-md hover:bg-black hover:text-white" href="/instrucciones-de-uso">Instrucciones de uso</a>
       <a class="md:mx-1 p-2 rounded-md hover:bg-black hover:text-white" href="/buenas-practicas">Buenas prácticas</a>
-      <a class="mx-1 p-2 rounded-md hover:bg-black hover:text-white" href="/formulario-residencias">Formularios</a>
-      <!-- <a class="mx-1 p-2 rounded-md hover:bg-black hover:text-white" href="/formulario-residentes">Formulario Residentes</a> -->
+      <a class="mx-1 p-2 rounded-md hover:bg-black hover:text-white" href="/formulario-residencias">Residencias</a>
+      <a class="mx-1 p-2 rounded-md hover:bg-black hover:text-white" href="/formulario-residentes">Residentes</a>
     </div>
   </div>
 </header>
