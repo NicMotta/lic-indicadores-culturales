@@ -1,5 +1,5 @@
 ---
-import LayoutEncuesta from '../layouts/LayoutEncuesta.astro'
+import Layout from '../layouts/Layout.astro'
 import Rainbow from '/assets/rainbow.svg'
 ---
 
@@ -8,7 +8,7 @@ import Rainbow from '/assets/rainbow.svg'
     html { margin: 0; height: 100%; overflow: hidden; }
     iframe { position: absolute; top: 0; right: 0; bottom: 0; left: 0; border: 0; }
   </style>
-<LayoutEncuesta title="Indicadores Culturales - Formulario Residentes">
+<Layout title="Indicadores Culturales - Formulario Residentes">
     <iframe
       class="mt-16"
       data-tally-src="https://tally.so/r/wMDlGM?transparentBackground=1"
@@ -16,4 +16,4 @@ import Rainbow from '/assets/rainbow.svg'
       height="100%">
     </iframe>
   <img class="absolute opacity-40 bottom-0 left-0 m-auto right-0 -z-10" src={Rainbow} alt="">
-</LayoutEncuesta>
+</Layout>
