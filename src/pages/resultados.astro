@@ -6,15 +6,33 @@ import BarListComponent from '../components/BarList'
 import worldMap from '/assets/world-map.png'
 import americaMap from '/assets/america-map.png'
 import argentinaMap from '/assets/argentina-map.png'
+import Papa from 'papaparse';
+
+async function getResidencias() {
+	const res = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTi9d9r51ywbUK0ksH-tQ8bc_C_RZE1MY7-FTo45IpwFB5BodA24iGQ_oy3iRIfWPH8CQ2NYg1GWfbg/pub?gid=0&single=true&output=csv');
+	const data = await res.text();
+	const parsed = await new Promise((resolve, reject) => {
+		Papa.parse(data, {
+			header: true,
+			complete: (result) => resolve(result.data),
+			error: reject
+		})
+	})
+	console.log(parsed)
+	return parsed;
+}
+
+const residencias = await getResidencias();
 ---
 
 <Layout title="Indicadores Culturales - Resultados">
 	<main class="max-w-5xl m-auto">
-		<DonutChartComponent client:only='react'/>
+		<!-- <DonutChartComponent client:only='react'/>
 		<BarListComponent client:only='react' />
 		<BarChartComponent client:only='react' />
 		<img class="max-w-xl" src={worldMap} alt="">
 		<img class="max-w-xl" src={americaMap} alt="">
-		<img class="max-w-xl" src={argentinaMap} alt="">
+		<img class="max-w-xl" src={argentinaMap} alt=""> -->
+		{ residencias }
 	</main>
 </Layout>
