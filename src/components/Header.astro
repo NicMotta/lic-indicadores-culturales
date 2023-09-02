@@ -36,10 +36,10 @@ import Logo from '/assets/logo.svg';
           <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y rounded shadow">
             <ul class="text-xl md:text-base">
               <li>
-                <a href="/formulario-residencias" class="block p-3 text-black font-semibold rounded-md hover:underline">Proyecto cultural / residencia</a>
+                <a href="/formulario-residencias" class="block p-3 text-black font-semibold rounded-md hover:underline">Proyecto Cultural / Residencia</a>
               </li>
               <li>
-                <a href="/formulario-residentes" class="block p-3 text-black font-semibold rounded-md hover:underline">Participantes / residentes</a>
+                <a href="/formulario-residentes" class="block p-3 text-black font-semibold rounded-md hover:underline">Participantes / Residentes</a>
               </li>
             </ul>
           </div>
@@ -53,16 +53,33 @@ import Logo from '/assets/logo.svg';
           <div id="resultados" class="z-10 hidden font-normal bg-white rounded shadow">
             <ul class="text-xl md:text-base">
               <li>
-                <a href="#" class="block p-3 text-black font-semibold rounded-md hover:underline">Resultados Residencias</a>
+                <a href="/2023/resultados-residencias" class="block p-3 text-black font-semibold rounded-md hover:underline">Proyectos Culturales / Residencias - 2023</a>
               </li>
               <li>
-                <a href="#" class="block p-3 text-black font-semibold rounded-md hover:underline">Resultados Residentes</a>
+                <a href="/2023/resultados-residentes" class="block p-3 text-black font-semibold rounded-md hover:underline">Participantes / Residentes - 2023</a>
               </li>
             </ul>
           </div>
         </li>
         <li>
-          <a class="rounded-md hover:underline font-semibold" href="/quienes-somos">Quienes somos</a>
+          <button id="dropdownNavbarLink" data-dropdown-toggle="quienes-somos"
+            class="flex items-center justify-between text-black font-semibold md:p-0 md:w-auto hover:underline">
+            ¿Quiénes somos?
+          </button>
+            <!-- Dropdown menu -->
+          <div id="quienes-somos" class="z-10 hidden font-normal bg-white rounded shadow">
+            <ul class="text-xl md:text-base">
+              <li>
+                <a href="/quienes-somos" class="block p-3 text-black font-semibold rounded-md hover:underline">Nosotres</a>
+              </li>
+              <li>
+                <a href="/quienes-somos/#manifiesto" class="block p-3 text-black font-semibold rounded-md hover:underline">Manifiesto</a>
+              </li>
+              <li>
+                <a href="/quienes-somos/#buenas-practicas" class="block p-3 text-black font-semibold rounded-md hover:underline">Buenas prácticas</a>
+              </li>
+            </ul>
+          </div>
         </li>
       </ul>
     </div>

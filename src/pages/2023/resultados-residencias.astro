@@ -1,0 +1,51 @@
+---
+import LayoutResultados from '../../layouts/LayoutResultados.astro';
+import DonutChartComponent from '../../components/DonutChart'
+import BarChartComponent from '../../components/BarChart'
+import BarListComponent from '../../components/BarList'
+import RatingBar from '../../components/RatingBar'
+import Average from '../../components/Average'
+import worldMap from '/assets/world-map.png'
+import americaMap from '/assets/america-map.png'
+import argentinaMap from '/assets/argentina-map.png'
+import Papa from 'papaparse';
+import { RESULTADOS_RESIDENCIA } from './results'
+import HourglassPink from '/assets/hourglass-pink.svg'
+---
+
+<LayoutResultados title="Indicadores Culturales - Resultados Proyectos Culturales / Residencias">
+	<main class="max-w-5xl m-auto relative">
+    <img src={HourglassPink} class="w-50 fixed top-0 left-0 m-auto right-0 -z-10" alt="">
+		<h1 class="text-xl md:text-4xl font-semibold mt-32 mb-2 text-center">RESULTADOS ENCUESTA</h1>
+		<h2 class="text-3xl md:text-5xl font-extrabold text-center">PROYECTOS CULTURALES / RESIDENCIAS</h2>
+		<h2 class="text-lg md:text-3xl font-semibold mb-10 text-center">2023</h2>
+		<div class="flex flex-wrap gap-2">
+			{ RESULTADOS_RESIDENCIA.questions.map(question => {
+				if (question.type === 'average') {
+					return <Average client:only='react' data={question.data} title={question.question} />
+				}
+
+				if (question.type === 'donut') {
+					return <DonutChartComponent client:only='react' title={question.question} data={question.data}/>
+				}
+
+				if (question.type === 'rating') {
+					return <RatingBar client:only='react' data={question.rating} title={question.question}/>
+				}
+
+				if (question.type === 'options') {
+					return <BarListComponent client:only='react' data={question.options} title={question.question}/>
+					// return <BarChartComponent client:only='react' data={question.options} title={question.question} value={question.value}/>
+
+				}
+			})}
+		</div>
+		<!-- <ProgressBarComponent client:only='react'/> -->
+		<!-- <DonutChartComponent client:only='react'/> -->
+		<!-- <BarListComponent client:only='react' /> -->
+		<!-- <BarChartComponent client:only='react' /> -->
+		<!-- <img class="max-w-xl" src={worldMap} alt="">
+		<img class="max-w-xl" src={americaMap} alt="">
+		<img class="max-w-xl" src={argentinaMap} alt=""> -->
+	</main>
+</LayoutResultados>

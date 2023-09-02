@@ -1,29 +1,13 @@
 import { Title, BarChart } from "@tremor/react";
 
-const chartdata = [
-  {
-    name: "Amphibians",
-    "Number of threatened species": 2488,
-  },
-  {
-    name: "Birds",
-    "Number of threatened species": 1445,
-  },
-  {
-    name: "Crustaceans",
-    "Number of threatened species": 743,
-  },
-];
-
-export default function BarChartComponent () {
+export default function BarChartComponent (props) {
 
   return (
     <div className="max-w-xl p-3">
-      <Title>Titulo</Title>
+      <Title>{props.title}</Title>
       <BarChart
-        data={chartdata}
+        data={props.data}
         index="name"
-        categories={["Number of threatened species"]}
         colors={["blue"]}
         yAxisWidth={48}
       />
