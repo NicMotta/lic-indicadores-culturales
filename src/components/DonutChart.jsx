@@ -3,7 +3,7 @@ import { Title, DonutChart, Text } from "@tremor/react";
 export default function DonutChartComponent(props) {
 
   return(
-    <div className="w-full shadow p-5 rounded bg-white">
+    <div className="w-full md:w-[48%] shadow p-5 rounded bg-white">
       <Title className="mb-2 text-sm font-bold">{props.title}</Title>
       <div className="flex items-center">
       <DonutChart

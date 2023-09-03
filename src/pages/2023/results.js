@@ -1,7 +1,12 @@
+import { Title } from "@tremor/react";
+
 export const RESULTADOS_RESIDENCIA = {
-  title: "Resultados de la Residencia",
-  description: "Resultados de la Residencia",
   questions:[
+    {
+      type: 'title',
+      title: 'GESTIÓN DE LA RESIDENCIA',
+      subtitle: 'Esta sección tiene como objetivo indagar sobre aquellas variables a partir de las cuales se desempeña la residencia, para relevar a partir de qué recursos se organiza, se gestiona y administra.'
+    },
     {
       id: 0,
       type: 'average',
