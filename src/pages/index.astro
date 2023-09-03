@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import VectorYellow from '/assets/vector-yellow.svg'
+import { URL_LINKS } from '../utility/constants'
 ---
 
 <Layout title="Indicadores Culturales - Home">
@@ -11,8 +12,8 @@ import VectorYellow from '/assets/vector-yellow.svg'
       <div class="text-left mt-12 mb-5">
         <p class="my-2">Los indicadores culturales son herramientas, de medición cualitativa y cuantitativa, que sirven para evaluar los proyectos culturales independientes.</p>
         <p class="my-2 font-semibold">Esta web es una plataforma ideada para relevar indicadores que permitan evaluar el accionar y la incidencia de los proyectos culturales, con especial foco en las residencias de arte.</p>
-        <p class="my-2">Para usar esta plataforma sugerimos leer las <a href="/instrucciones-de-uso" class="font-bold p-1 rounded uppercase hover:bg-black hover:text-white">instrucciones de uso,</a> que incluyen 4 categorías que consideramos relevantes en este tema. Según estas categorías hemos desarrollado cuestionarios (encuestas) para relevar datos de cada <a href="/instrucciones-de-uso" class="font-bold p-1 uppercase rounded hover:bg-black hover:text-white">proyecto cultural / residencia</a> y de sus <a href="/instrucciones-de-uso" class="font-bold uppercase p-1 rounded hover:bg-black hover:text-white">participantes / residentes.</a></p>
-        <p class="my-2">La web incluye un <a href="/quienes-somos/#manifiesto" class="font-bold uppercase p-1 rounded hover:bg-black hover:text-white">manifiesto</a> elaborado por un grupo interdisciplinario de profesionales durante <span class="font-bold">LIC (Laboratorio de Indicadores Culturales)</span>, y un <a href="/quienes-somos/#buenas-practicas" class="font-bold p-1 uppercase rounded hover:bg-black hover:text-white">Manual de buenas prácticas</a> elaborado por la <a href="https://redquincho.ar/" class="font-bold uppercase p-1 rounded hover:bg-black hover:text-white">Red Quincho de Residencias de Arte</a></p>
+        <p class="my-2">Para usar esta plataforma sugerimos leer las <a href={URL_LINKS.instruccionesDeUso} class="font-bold p-1 rounded uppercase hover:bg-black hover:text-white">instrucciones de uso,</a> que incluyen 4 categorías que consideramos relevantes en este tema. Según estas categorías hemos desarrollado cuestionarios (encuestas) para relevar datos de cada <a href={URL_LINKS.encuestas.residencias} class="font-bold p-1 uppercase rounded hover:bg-black hover:text-white">proyecto cultural / residencia</a> y de sus <a href={URL_LINKS.encuestas.residentes} class="font-bold uppercase p-1 rounded hover:bg-black hover:text-white">participantes / residentes.</a></p>
+        <p class="my-2">La web incluye un <a href={URL_LINKS.manifiesto} class="font-bold uppercase p-1 rounded hover:bg-black hover:text-white">manifiesto</a> elaborado por un grupo interdisciplinario de profesionales durante <span class="font-bold">LIC (Laboratorio de Indicadores Culturales)</span>, y un <a href={URL_LINKS.buenasPracticas} class="font-bold p-1 uppercase rounded hover:bg-black hover:text-white">Manual de buenas prácticas</a> elaborado por la <a href={URL_LINKS.redQuincho} class="font-bold uppercase p-1 rounded hover:bg-black hover:text-white">Red Quincho de Residencias de Arte</a></p>
         <p class="my-2 mb-10">Como primera acción, estamos realizando una primera medición en la Red Quincho, para obtener una muestra actual de la situación de las residencias de arte en el país.</p>
       </div>
   </div>

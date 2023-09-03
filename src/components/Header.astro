@@ -1,10 +1,11 @@
 ---
 import Logo from '/assets/logo.svg';
+import { URL_LINKS } from '../utility/constants';
 ---
 
 <nav class="">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 text-black z-10">
-    <a href="/" class="flex items-center p-1 hover:rounded-md hover:underline">
+    <a href={URL_LINKS.home} class="flex items-center p-1 hover:rounded-md hover:underline">
       <img src={Logo} class="w-7 mr-3" alt="" />
       <span class="self-center text-xs md:text-base font-semibold whitespace-nowrap">LIC - Laboratorio de Indicadores Culturales</span>
     </a>
@@ -22,10 +23,10 @@ import Logo from '/assets/logo.svg';
     <div class="hidden w-full md:block md:w-auto bg-white md:bg-transparent z-20 p-3 md:p-0 rounded-lg md:rounded-none shadow md:shadow-none" id="navbar-dropdown">
       <ul class="flex flex-col font-medium text-xl md:text-base md:p-0 rounded-lg md:flex-row md:space-x-8 md:mt-0">
         <li>
-          <a class="my-2 rounded-md hover:underline font-semibold" href="/">Indicadores Culturales</a>
+          <a class="my-2 rounded-md hover:underline font-semibold" href={URL_LINKS.home}>Indicadores Culturales</a>
         </li>
         <li>
-          <a class="rounded-md hover:underline font-semibold" href="/instrucciones-de-uso">Instrucciones de uso</a>
+          <a class="rounded-md hover:underline font-semibold" href={URL_LINKS.instruccionesDeUso}>Instrucciones de uso</a>
         </li>
         <li>
           <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
@@ -36,10 +37,10 @@ import Logo from '/assets/logo.svg';
           <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y rounded shadow">
             <ul class="text-xl md:text-base">
               <li>
-                <a href="/formulario-residencias" class="block p-3 text-black font-semibold rounded-md hover:underline">Proyecto Cultural / Residencia</a>
+                <a href={URL_LINKS.encuestas.residencias} class="block p-3 text-black font-semibold rounded-md hover:underline">Proyecto Cultural / Residencia</a>
               </li>
               <li>
-                <a href="/formulario-residentes" class="block p-3 text-black font-semibold rounded-md hover:underline">Participantes / Residentes</a>
+                <a href={URL_LINKS.encuestas.residentes} class="block p-3 text-black font-semibold rounded-md hover:underline">Participantes / Residentes</a>
               </li>
             </ul>
           </div>
@@ -53,10 +54,10 @@ import Logo from '/assets/logo.svg';
           <div id="resultados" class="z-10 hidden font-normal bg-white rounded shadow">
             <ul class="text-xl md:text-base">
               <li>
-                <a href="/2023/resultados-residencias" class="block p-3 text-black font-semibold rounded-md hover:underline">Proyectos Culturales / Residencias - 2023</a>
+                <a href={URL_LINKS.results.residencias} class="block p-3 text-black font-semibold rounded-md hover:underline">Proyectos Culturales / Residencias - 2023</a>
               </li>
               <li>
-                <a href="/2023/resultados-residentes" class="block p-3 text-black font-semibold rounded-md hover:underline">Participantes / Residentes - 2023</a>
+                <a href={URL_LINKS.results.residentes} class="block p-3 text-black font-semibold rounded-md hover:underline">Participantes / Residentes - 2023</a>
               </li>
             </ul>
           </div>
@@ -70,13 +71,13 @@ import Logo from '/assets/logo.svg';
           <div id="quienes-somos" class="z-10 hidden font-normal bg-white rounded shadow">
             <ul class="text-xl md:text-base">
               <li>
-                <a href="/quienes-somos" class="block p-3 text-black font-semibold rounded-md hover:underline">Nosotres</a>
+                <a href={URL_LINKS.quienesSomos} class="block p-3 text-black font-semibold rounded-md hover:underline">Nosotres</a>
               </li>
               <li>
-                <a href="/quienes-somos/#manifiesto" class="block p-3 text-black font-semibold rounded-md hover:underline">Manifiesto</a>
+                <a href={URL_LINKS.manifiesto} class="block p-3 text-black font-semibold rounded-md hover:underline">Manifiesto</a>
               </li>
               <li>
-                <a href="/quienes-somos/#buenas-practicas" class="block p-3 text-black font-semibold rounded-md hover:underline">Buenas prácticas</a>
+                <a href={URL_LINKS.buenasPracticas} class="block p-3 text-black font-semibold rounded-md hover:underline">Buenas prácticas</a>
               </li>
             </ul>
           </div>
