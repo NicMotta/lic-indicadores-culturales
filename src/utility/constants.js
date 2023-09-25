@@ -15,3 +15,5 @@ export const URL_LINKS = {
   instruccionesDeUso: '/instrucciones-de-uso',
   redQuincho: 'https://redquincho.ar/',
 };
+
+export const SHOW_RESULTS = true;

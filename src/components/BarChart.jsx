@@ -8,6 +8,7 @@ export default function BarChartComponent (props) {
       <BarChart
         data={props.data}
         index="name"
+        categories={[props.category]}
         colors={["blue"]}
         yAxisWidth={48}
       />

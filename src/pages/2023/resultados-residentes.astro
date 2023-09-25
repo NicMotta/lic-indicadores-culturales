@@ -1,10 +1,7 @@
 ---
 import LayoutResultados from '../../layouts/LayoutResultados.astro';
-import DonutChartComponent from '../../components/DonutChart'
-import BarListComponent from '../../components/BarList'
-import RatingBar from '../../components/RatingBar'
-import Average from '../../components/Average'
-import { RESULTADOS_RESIDENCIA } from './results'
+import { DonutChart, BarList, RatingBar, BarChart, Average } from '../../components'
+import { RESULTADOS_RESIDENTES } from './results'
 import HourglassViolet from '/assets/hourglass-violet.svg'
 ---
 
@@ -14,14 +11,24 @@ import HourglassViolet from '/assets/hourglass-violet.svg'
 		<h1 class="text-xl md:text-4xl font-semibold mt-32 mb-2 text-center">RESULTADOS ENCUESTA</h1>
 		<h2 class="text-3xl md:text-5xl font-extrabold text-center">PARTICIPANTES / RESIDENTES</h2>
 		<h2 class="text-lg md:text-3xl font-semibold mb-10 text-center">2023</h2>
-		<div class="flex flex-wrap gap-2">
-			{ RESULTADOS_RESIDENCIA.questions.map(question => {
+		<div class="flex flex-col md:flex-row flex-wrap p-2 md:p-0 gap-4 justify-center">
+			{ RESULTADOS_RESIDENTES.questions.map(question => {
+
+				if (question.type === 'title') {
+					return (
+						<div class="my-14 w-full flex flex-col gap-4 items-center">
+							<h2 class="text-3xl w-full text-center font-extrabold">{question.title}</h2>
+							<p class="text-base w-full">{question.subtitle}</p>
+						</div>
+					)
+				}
+
 				if (question.type === 'average') {
 					return <Average client:only='react' data={question.data} title={question.question} />
 				}
 
 				if (question.type === 'donut') {
-					return <DonutChartComponent client:only='react' title={question.question} data={question.data}/>
+					return <DonutChart client:only='react' title={question.question} data={question.data}/>
 				}
 
 				if (question.type === 'rating') {
@@ -29,18 +36,9 @@ import HourglassViolet from '/assets/hourglass-violet.svg'
 				}
 
 				if (question.type === 'options') {
-					return <BarListComponent client:only='react' data={question.options} title={question.question}/>
-					// return <BarChartComponent client:only='react' data={question.options} title={question.question} value={question.value}/>
-
+					return <BarList client:only='react' data={question.options} title={question.question}/>
 				}
 			})}
 		</div>
-		<!-- <ProgressBarComponent client:only='react'/> -->
-		<!-- <DonutChartComponent client:only='react'/> -->
-		<!-- <BarListComponent client:only='react' /> -->
-		<!-- <BarChartComponent client:only='react' /> -->
-		<!-- <img class="max-w-xl" src={worldMap} alt="">
-		<img class="max-w-xl" src={americaMap} alt="">
-		<img class="max-w-xl" src={argentinaMap} alt=""> -->
 	</main>
 </LayoutResultados>

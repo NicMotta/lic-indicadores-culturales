@@ -1,6 +1,6 @@
 ---
 import Logo from '/assets/logo.svg';
-import { URL_LINKS } from '../utility/constants';
+import { URL_LINKS, SHOW_RESULTS } from '../utility/constants';
 ---
 
 <nav class="">
@@ -45,11 +45,12 @@ import { URL_LINKS } from '../utility/constants';
             </ul>
           </div>
         </li>
-        <li>
-          <button id="dropdownNavbarLink" data-dropdown-toggle="resultados"
-            class="flex items-center justify-between text-black font-semibold md:p-0 md:w-auto hover:underline">
-            Resultados
-          </button>
+        {SHOW_RESULTS &&
+          <li>
+            <button id="dropdownNavbarLink" data-dropdown-toggle="resultados"
+              class="flex items-center justify-between text-black font-semibold md:p-0 md:w-auto hover:underline">
+              Resultados
+            </button>
             <!-- Dropdown menu -->
           <div id="resultados" class="z-10 hidden font-normal bg-white rounded shadow">
             <ul class="text-xl md:text-base">
@@ -61,7 +62,8 @@ import { URL_LINKS } from '../utility/constants';
               </li>
             </ul>
           </div>
-        </li>
+          </li>
+        }
         <li>
           <button id="dropdownNavbarLink" data-dropdown-toggle="quienes-somos"
             class="flex items-center justify-between text-black font-semibold md:p-0 md:w-auto hover:underline">

@@ -1,9 +1,6 @@
 ---
 import LayoutResultados from '../../layouts/LayoutResultados.astro';
-import DonutChartComponent from '../../components/DonutChart'
-import BarListComponent from '../../components/BarList'
-import RatingBar from '../../components/RatingBar'
-import Average from '../../components/Average'
+import { DonutChart, BarList, RatingBar, BarChart, Average } from '../../components'
 import { RESULTADOS_RESIDENCIA } from './results'
 import HourglassPink from '/assets/hourglass-pink.svg'
 ---
@@ -13,14 +10,15 @@ import HourglassPink from '/assets/hourglass-pink.svg'
     <img src={HourglassPink} class="w-50 fixed top-0 left-0 m-auto right-0 -z-10" alt="">
 		<h1 class="text-xl md:text-4xl font-semibold mt-32 mb-2 text-center">RESULTADOS ENCUESTA</h1>
 		<h2 class="text-3xl md:text-5xl font-extrabold text-center">PROYECTOS CULTURALES / RESIDENCIAS</h2>
-		<h2 class="text-lg md:text-3xl font-semibold mb-10 text-center">2023</h2>
+		<h2 class="text-lg md:text-3xl font-semibold mb-14 text-center">2023</h2>
 		<div class="flex flex-col md:flex-row flex-wrap p-2 md:p-0 gap-4 justify-center">
 			{ RESULTADOS_RESIDENCIA.questions.map(question => {
+
 				if (question.type === 'title') {
 					return (
-						<div class="my-2 flex flex-col gap-4 items-center">
-							<h2 class="text-2xl w-full text-center font-extrabold">{question.title}</h2>
-							<p class="text-base w-full md:w-2/3">{question.subtitle}</p>
+						<div class="my-14 w-full flex flex-col gap-4 items-center">
+							<h2 class="text-3xl w-full text-center font-extrabold">{question.title}</h2>
+							<p class="text-base w-full">{question.subtitle}</p>
 						</div>
 					)
 				}
@@ -30,7 +28,7 @@ import HourglassPink from '/assets/hourglass-pink.svg'
 				}
 
 				if (question.type === 'donut') {
-					return <DonutChartComponent client:only='react' title={question.question} data={question.data}/>
+					return <DonutChart client:only='react' title={question.question} data={question.data}/>
 				}
 
 				if (question.type === 'rating') {
@@ -38,18 +36,14 @@ import HourglassPink from '/assets/hourglass-pink.svg'
 				}
 
 				if (question.type === 'options') {
-					return <BarListComponent client:only='react' data={question.options} title={question.question}/>
-					// return <BarChartComponent client:only='react' data={question.options} title={question.question} value={question.value}/>
+					return <BarList client:only='react' data={question.options} title={question.question}/>
+				}
 
+				if (question.type === 'bars') {
+					console.log(question.question, question.category, question.data)
+					return <BarChart client:only='react' title={question.question} category={question.category} data={question.options} />
 				}
 			})}
 		</div>
-		<!-- <ProgressBarComponent client:only='react'/> -->
-		<!-- <DonutChartComponent client:only='react'/> -->
-		<!-- <BarListComponent client:only='react' /> -->
-		<!-- <BarChartComponent client:only='react' /> -->
-		<!-- <img class="max-w-xl" src={worldMap} alt="">
-		<img class="max-w-xl" src={americaMap} alt="">
-		<img class="max-w-xl" src={argentinaMap} alt=""> -->
 	</main>
 </LayoutResultados>
