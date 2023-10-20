@@ -1,6 +1,8 @@
 ---
 import LayoutEncuestas from '../layouts/LayoutEncuestas.astro'
 import Rainbow from '/assets/rainbow.svg'
+import { Checker } from '../components'
+import { CODIGO_RESIDENCIAS, STORAGE_RESIDENCIA, URL_LINKS } from '../utility/constants'
 ---
 
 <script async src="https://tally.so/widgets/embed.js"/>
@@ -9,6 +11,7 @@ import Rainbow from '/assets/rainbow.svg'
     iframe { position: absolute; top: 0; right: 0; bottom: 0; left: 0; border: 0; }
   </style>
 <LayoutEncuestas title="Indicadores Culturales - Formulario Residencias de Arte">
+  <Checker client:only='react' code={CODIGO_RESIDENCIAS} storage={STORAGE_RESIDENCIA} redirect={URL_LINKS.home} login={URL_LINKS.loginResidencias}/>
   <iframe
     class="mt-16"
     data-tally-src="https://tally.so/r/wdEBeD?transparentBackground=1"

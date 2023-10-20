@@ -12,8 +12,16 @@ export const URL_LINKS = {
   categorias: '/instrucciones-de-uso/#categorias',
   manifiesto: 'quienes-somos/#manifiesto',
   buenasPracticas: '/quienes-somos/#buenas-practicas',
+  alianzas: '/quienes-somos/#alianzas',
   instruccionesDeUso: '/instrucciones-de-uso',
   redQuincho: 'https://redquincho.ar/',
+  loginResidencias: '/login-residencias',
+  loginResidentes: '/login-residentes',
 };
 
 export const SHOW_RESULTS = true;
+
+export const CODIGO_RESIDENCIAS = 'LIC2023'
+export const CODIGO_RESIDENTES = 'RESIDENTES2023'
+export const STORAGE_RESIDENCIA = 'loginCodeResidencia'
+export const STORAGE_RESIDENTE = 'loginCodeResidente'
