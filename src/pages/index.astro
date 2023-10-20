@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import VectorYellow from '/assets/vector-yellow.svg'
-import { URL_LINKS } from '../utility/constants'
+import { URL_LINKS, STORAGE_RESIDENCIA, STORAGE_RESIDENTE } from '../utility/constants'
 ---
 
 <Layout title="Indicadores Culturales - Home">
@@ -18,6 +18,10 @@ import { URL_LINKS } from '../utility/constants'
       </div>
   </div>
 </Layout>
+
+<script>
+  localStorage.clear()
+</script>
 
 <style>
   #background {

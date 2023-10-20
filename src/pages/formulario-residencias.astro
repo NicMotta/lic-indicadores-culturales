@@ -11,7 +11,9 @@ import { CODIGO_RESIDENCIAS, STORAGE_RESIDENCIA, URL_LINKS } from '../utility/co
     iframe { position: absolute; top: 0; right: 0; bottom: 0; left: 0; border: 0; }
   </style>
 <LayoutEncuestas title="Indicadores Culturales - Formulario Residencias de Arte">
-  <Checker client:only='react' code={CODIGO_RESIDENCIAS} storage={STORAGE_RESIDENCIA} redirect={URL_LINKS.home} login={URL_LINKS.loginResidencias}/>
+  <div class="hidden">
+    <Checker client:only='react' code={CODIGO_RESIDENCIAS} storage={STORAGE_RESIDENCIA} redirect={URL_LINKS.home} login={URL_LINKS.loginResidencias}/>
+  </div>
   <iframe
     class="mt-16"
     data-tally-src="https://tally.so/r/wdEBeD?transparentBackground=1"
