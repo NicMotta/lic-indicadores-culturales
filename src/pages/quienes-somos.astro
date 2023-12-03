@@ -1,6 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import VectorYellow from '/assets/vector-yellow.svg'
+import CcebaImg from '/assets/img/cceba.jpeg'
+import FuturaImg from '/assets/img/futura.jpeg'
+import QuinchoImg from '/assets/img/red-quincho.jpeg'
+import WilliamImg from '/assets/img/fundacion-williams.jpeg'
+import EcoUrbanoImg from '/assets/img/eco-urbano.png'
+import LaTribuImg from '/assets/img/la-tribu.jpeg'
+import SecretariaCulturaImg from '/assets/img/secretaria-cultura-entre-rios.jpeg'
+import DiputadosImg from '/assets/img/diputados-entre-rios.jpeg'
 ---
 
 <Layout title="Indicadores Culturales - ¿Quiénes somos?">
@@ -10,11 +18,11 @@ import VectorYellow from '/assets/vector-yellow.svg'
       <h2 class="text-xl md:text-4xl font-extrabold mb-10 text-center">¿CÓMO NACIÓ EL PROYECTO?</h2>
       <p class="my-2">Con el propósito de reflexionar y generar indicadores culturales que den cuenta del impacto del trabajo de los proyectos culturales independientes, para así visibilizar sus diferentes aportes a la comunidad y otros ámbitos, las residencias de arte El Potrero (Entre Ríos), LPEP (La Paternal Espacio Proyecto, Ciudad de Buenos Aires y Entre Ríos) y URRA (Buenos Aires), llevamos a cabo una residencia a modo de laboratorio de innovación sociocultural, de nombre LIC (Laboratorio de Indicadores Culturales), en Paraná, Entre Ríos, durante diciembre 2022.</p>
       <p class="my-2">A partir de una convocatoria regional e invitados de diferentes partes del país reunimos a artistas, educadores y sociólogos para producir juntxs un primer protocolo para ser implementado inicialmente dentro de la Red Quincho de residencias de arte.</p>
-      <p class="mt-6"><span class="font-bold">El Potrero: Marcela Andino</span> / marceandino1@gmail.com / @residencia_potrero</p>
-      <p class="my-2"><span class="font-bold">LPEP: Francisco Paredes</span> / lapaternaltalleres@gmail.com / @francparedes</p>
-      <p class="my-2"><span class="font-bold">URRA: Melina Berkenwald</span> / urra.direccion@gmail.com / @proyectourra</p>
+      <p class="mt-6"><span class="font-bold">El Potrero: Marcela Andino -</span><a href="https://www.instagram.com/residencia_potrero/" class="font-bold p-1 rounded hover:bg-black hover:text-white">@residencia_potrero</a> _ marceandino1@gmail.com</p>
+      <p class="my-2"><span class="font-bold">LPEP: Francisco Paredes -</span><a href="https://www.instagram.com/lapaternalespacioproyecto/" class="font-bold p-1 rounded hover:bg-black hover:text-white">@francparedes</a> _ lapaternaltalleres@gmail.com</p>
+      <p class="my-2"><span class="font-bold">URRA: Melina Berkenwald -</span><a href="https://www.instagram.com/proyectourra/" class="font-bold p-1 rounded hover:bg-black hover:text-white">@proyectourra</a>_ urra.direccion@gmail.com</p>
 
-      <p class="my-2">Más información de la residencia LIC. <a href='#' class="font-bold uppercase p-1 rounded hover:bg-black hover:text-white">Click aquí</a></p>
+      <p class="my-2">Más información de la residencia LIC. <a href='https://drive.google.com/file/d/1APn5Es01X6krR0Bwkbf3zTO5f_H90PDi/view' class="font-bold uppercase p-1 rounded hover:bg-black hover:text-white">Click aquí</a></p>
 
       <h1 id="manifiesto" class="text-3xl md:text-5xl font-semibold mt-32 mb-2 text-center">DECLARACIÓN DE PRINCIPIOS</h1>
       <h2 class="text-xl md:text-4xl font-extrabold mb-10 text-center">PARA LA GESTIÓN CULTURAL</h2>
@@ -103,8 +111,23 @@ import VectorYellow from '/assets/vector-yellow.svg'
           </div>
         </div>
 
-        <h1 class="text-3xl md:text-5xl font-semibold mt-16 mb-8 text-center">ALIANZAS</h1>
+        <h1 id="alianzas" class="text-3xl md:text-5xl font-semibold mt-16 mb-8 text-center">ALIANZAS</h1>
         <p class="my-2">Este proyecto se desarrolló en 2022, en el marco del Programa “FUTURA, herramientas para una cultura en movimiento”, organizado por el CCEBA; Centro Cultural de España en Buenos Aires, AECID - Agencia Española de Cooperación Internacional para el Desarrollo, con el apoyo de la Fundación Williams. LIC se realizó con la colaboración de la Secretaría de Cultura de la Provincia de Entre Ríos, UADER, Fundación Eco Urbano, La Tribu y el territorio, y la Red Quincho de Residencias de Arte de Argentina.</p>
+        <div class="p-24">
+          <img src={CcebaImg} alt="">
+          <div class="grid grid-cols-3 gap-8 items-center mt-8">
+            <img src={FuturaImg} alt="">
+            <img src={WilliamImg} alt="">
+            <img src={QuinchoImg} alt="">
+          </div>
+          <div class="grid grid-cols-4 gap-8 items-center mt-8">
+            <img class="w-2/3 m-auto" src={EcoUrbanoImg} alt="">
+            <img src={LaTribuImg} alt="">
+            <img src={SecretariaCulturaImg} alt="">
+            <img class="w-2/3 m-auto" src={DiputadosImg} alt="">
+          </div>
+      </div>
+
     </div>
   </div>
 </Layout>
