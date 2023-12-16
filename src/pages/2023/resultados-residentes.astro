@@ -3,6 +3,7 @@ import LayoutResultados from '../../layouts/LayoutResultados.astro';
 import { DonutChart, BarList, RatingBar, BarChart, Average } from '../../components'
 import { RESULTADOS_RESIDENTES } from './results'
 import HourglassViolet from '/assets/hourglass-violet.svg'
+import { SHOW_RESULTS } from '../../utility/constants'
 ---
 
 <LayoutResultados title="Indicadores Culturales - Resultados Participantes / Residentes">
@@ -11,34 +12,40 @@ import HourglassViolet from '/assets/hourglass-violet.svg'
 		<h1 class="text-xl md:text-4xl font-semibold mt-32 mb-2 text-center">RESULTADOS ENCUESTA</h1>
 		<h2 class="text-3xl md:text-5xl font-extrabold text-center">PARTICIPANTES / RESIDENTES</h2>
 		<h2 class="text-lg md:text-3xl font-semibold mb-10 text-center">2023</h2>
-		<div class="flex flex-col md:flex-row flex-wrap p-2 md:p-0 gap-4 justify-center">
-			{ RESULTADOS_RESIDENTES.questions.map(question => {
 
-				if (question.type === 'title') {
-					return (
-						<div class="my-14 w-full flex flex-col gap-4 items-center">
-							<h2 class="text-3xl w-full text-center font-extrabold">{question.title}</h2>
-							<p class="text-base w-full">{question.subtitle}</p>
-						</div>
-					)
-				}
+		{!SHOW_RESULTS && <h2 class="text-3xl w-full text-center font-extrabold">Próximamente</h2>}
 
-				if (question.type === 'average') {
-					return <Average client:only='react' data={question.data} title={question.question} />
-				}
 
-				if (question.type === 'donut') {
-					return <DonutChart client:only='react' title={question.question} data={question.data}/>
-				}
+		{SHOW_RESULTS &&
+			<div class="flex flex-col md:flex-row flex-wrap p-2 md:p-0 gap-4 justify-center">
+				{ RESULTADOS_RESIDENTES.questions.map(question => {
 
-				if (question.type === 'rating') {
-					return <RatingBar client:only='react' data={question.rating} title={question.question}/>
-				}
+					if (question.type === 'title') {
+						return (
+							<div class="my-14 w-full flex flex-col gap-4 items-center">
+								<h2 class="text-3xl w-full text-center font-extrabold">{question.title}</h2>
+								<p class="text-base w-full">{question.subtitle}</p>
+							</div>
+						)
+					}
 
-				if (question.type === 'options') {
-					return <BarList client:only='react' data={question.options} title={question.question}/>
-				}
-			})}
-		</div>
+					if (question.type === 'average') {
+						return <Average client:only='react' data={question.data} title={question.question} />
+					}
+
+					if (question.type === 'donut') {
+						return <DonutChart client:only='react' title={question.question} data={question.data}/>
+					}
+
+					if (question.type === 'rating') {
+						return <RatingBar client:only='react' data={question.rating} title={question.question}/>
+					}
+
+					if (question.type === 'options') {
+						return <BarList client:only='react' data={question.options} title={question.question}/>
+					}
+				})}
+			</div>
+		}
 	</main>
 </LayoutResultados>
