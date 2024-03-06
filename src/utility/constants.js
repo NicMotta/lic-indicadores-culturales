@@ -19,7 +19,7 @@ export const URL_LINKS = {
   loginResidentes: "/login-residentes",
 };
 
-export const SHOW_RESULTS = false;
+export const SHOW_RESULTS = true;
 
 export const CODIGO_RESIDENCIAS = "LIC2023";
 export const CODIGO_RESIDENTES = "RESIDENTES2023";

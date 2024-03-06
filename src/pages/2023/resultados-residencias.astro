@@ -1,6 +1,6 @@
 ---
 import LayoutResultados from '../../layouts/LayoutResultados.astro';
-import { DonutChart, BarList, RatingBar, BarChart, Average } from '../../components'
+import { DonutChart, BarList, RatingBar, BarChart, Average, RatingBarList } from '../../components'
 import { RESULTADOS_RESIDENCIA } from './results'
 import HourglassPink from '/assets/hourglass-pink.svg'
 import { SHOW_RESULTS } from '../../utility/constants'
@@ -47,6 +47,9 @@ import { SHOW_RESULTS } from '../../utility/constants'
 					if (question.type === 'bars') {
 						console.log(question.question, question.category, question.data)
 						return <BarChart client:only='react' title={question.question} category={question.category} data={question.options} />
+					}
+					if (question.type === 'rating-list') {
+						return <RatingBarList client:only='react' data={question.options} title={question.question}/>
 					}
 				})}
 			</div>
