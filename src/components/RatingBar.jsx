@@ -10,7 +10,7 @@ export default function RatingBarComponent (props) {
       <Title className="mb-2 text-sm font-bold">{props.title}</Title>
       <div className="flex gap-2">
         {stars.map((star) => (
-          <img className="w-6 yello" src={star <= props.data ? StarIcon : StarLineIcon} alt="star" />
+          <img className="w-7 yello" src={star <= props.data ? StarIcon : StarLineIcon} alt="star" />
           ))}
       <p className="text-yellow-400">{`| ${props.data}/5`}</p>
       </div>
