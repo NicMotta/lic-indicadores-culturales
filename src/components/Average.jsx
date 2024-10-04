@@ -3,8 +3,8 @@ import { Title, Text } from "@tremor/react";
 export default function RatingBarComponent (props) {
   const {min, average, max} = props.data
   return (
-    <div className="w-full md:w-[48%] shadow p-5 max-h-32 rounded bg-white">
-      <Title className="mb-2 text-sm font-bold">{props.title}</Title>
+    <div className="w-full md:w-[48%] shadow p-5 max-h-36 rounded bg-white">
+      <Title className="mb-2 text-black text-base font-bold">{props.title}</Title>
       <div className="flex justify-evenly items-center">
         <div>
         <Text className="text-base">Mínimo: <span className="font-bold">{min}</span></Text>

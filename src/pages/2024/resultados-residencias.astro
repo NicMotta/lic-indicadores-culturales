@@ -1,0 +1,54 @@
+---
+import LayoutResultados from '../../layouts/LayoutResultados.astro';
+import { DonutChart, BarList, RatingBar, Average, RatingBarList } from '../../components'
+import { RESULTADOS_RESIDENCIA } from './results'
+import HourglassPink from '/assets/hourglass-pink.svg'
+import { SHOW_RESULTS } from '../../utility/constants'
+---
+
+<LayoutResultados title="Indicadores Culturales - Resultados Proyectos Culturales / Residencias">
+	<main class="max-w-5xl m-auto relative">
+    <img src={HourglassPink} class="w-50 fixed top-0 left-0 m-auto right-0 -z-10" alt="">
+		<h1 class="text-xl md:text-4xl font-semibold mt-32 mb-2 text-center">RESULTADOS ENCUESTA</h1>
+		<h2 class="text-3xl md:text-5xl font-extrabold text-center">PROYECTOS CULTURALES / RESIDENCIAS</h2>
+		<h2 class="text-lg md:text-3xl font-semibold mb-14 text-center">2024</h2>
+
+		{!SHOW_RESULTS && <h2 class="text-3xl w-full text-center font-extrabold">Próximamente</h2>}
+
+		{SHOW_RESULTS &&
+			<div class="flex flex-col md:flex-row flex-wrap p-2 md:p-0 gap-4 justify-center">
+				{ RESULTADOS_RESIDENCIA.questions.map(question => {
+
+					if (question.type === 'title') {
+						return (
+							<div class="my-14 w-full flex flex-col gap-4 items-center">
+								<h2 class="text-3xl w-full text-center font-extrabold">{question.title}</h2>
+								<p class="text-base w-full">{question.subtitle}</p>
+							</div>
+						)
+					}
+
+					if (question.type === 'average') {
+						return <Average client:only='react' data={question.data} title={question.question} />
+					}
+
+					if (question.type === 'donut') {
+						return <DonutChart client:only='react' title={question.question} data={question.data}/>
+					}
+
+					if (question.type === 'rating') {
+						return <RatingBar client:only='react' data={question.rating} title={question.question} other={question.other}/>
+					}
+
+					if (question.type === 'options') {
+						return <BarList client:only='react' data={question.options} title={question.question} other={question.other}/>
+					}
+
+					if (question.type === 'rating-list') {
+						return <RatingBarList client:only='react' data={question.options} title={question.question} other={question.other}/>
+					}
+				})}
+			</div>
+		}
+	</main>
+</LayoutResultados>

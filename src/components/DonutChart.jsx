@@ -4,7 +4,7 @@ export default function DonutChartComponent(props) {
 
   return(
     <div className="w-full md:w-[48%] shadow p-5 rounded bg-white">
-      <Title className="mb-2 text-sm font-bold">{props.title}</Title>
+    <Title className="mb-2 text-black text-base font-bold">{props.title}</Title>
       <div className="flex items-center">
       <DonutChart
         className="mt-2 w-1/2"

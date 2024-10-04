@@ -7,7 +7,7 @@ const stars = [0, 1, 2, 3, 4];
 export default function RatingBarComponent (props) {
   return (
     <div className="w-full shadow p-5 rounded bg-white">
-      <Title className="mb-2 text-sm font-bold">{props.title}</Title>
+    <Title className="mb-2 text-black text-base font-bold">{props.title}</Title>
       <div className="flex flex-col gap-2">
         {props.data.map((option, index) => (
           <div key={index}>
@@ -21,5 +21,14 @@ export default function RatingBarComponent (props) {
           </div>
         ))}
       </div>
+      {props.other?.length > 0 &&
+      <>
+        <hr />
+        <p className="text-sm font-bold mt-2">Otros:</p>
+        {props.other?.map((other, index) => (
+          <p key={index} className="text-sm uppercase">{other}</p>
+        ))}
+      </>
+      }
   </div>
   )};
