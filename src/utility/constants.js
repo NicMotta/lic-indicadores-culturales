@@ -1,7 +1,7 @@
 export const URL_LINKS = {
   home: "/",
   results: {
-    residencias: "/2023/resultados-residencias",
+    residencias: "/2024/resultados-residencias",
     residentes: "/2023/resultados-residentes",
   },
   encuestas: {
