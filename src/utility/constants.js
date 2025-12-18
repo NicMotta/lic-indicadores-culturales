@@ -21,7 +21,7 @@ export const URL_LINKS = {
 
 export const SHOW_RESULTS = true;
 
-export const CODIGO_RESIDENCIAS = "LIC2023";
+export const CODIGO_RESIDENCIAS = "LIC2025";
 export const CODIGO_RESIDENTES = "RES2023";
 export const STORAGE_RESIDENCIA = "loginCodeResidencia";
 export const STORAGE_RESIDENTE = "loginCodeResidente";
